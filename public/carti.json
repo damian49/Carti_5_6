@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "coperta": "imagini/treimuschetari.jpg",
+    "titlu": "Cei trei muschetari",
+    "descriere": "Tânărul d’Artagnan sosește la Paris pentru a se alătura vestitului corp de gardă al regelui.",
+    "autor": "Alexandre Dumas",
+    "pret": 20.9
+  },
+  {
+    "id": 2,
+    "coperta": "imagini/capitan.jpg",
+    "titlu": "Căpitan la cincisprezece ani",
+    "descriere": "O carte specială din ciclul Călătorii extraordinare, cu ilustrații inspirate din ediția originală Hetzel, din secolul al XIX-lea.",
+    "autor": "Jules Verne",
+    "pret": 25.99
+  },
+  {
+    "id": 3,
+    "coperta": "imagini/outlander.jpg",
+    "titlu": "Călătoarea",
+    "descriere": "Anul 1945. Claire Randall, fosta sora medicala, se intoarce din razboi si pleaca impreuna cu sotul intr-o a doua luna de miere.",
+    "autor": "Diana Gabaldon",
+    "pret": 52.5
+  },
+  {
+    "id": 4,
+    "coperta": "imagini/holmes.jpg",
+    "titlu": "Memoriile lui Sherlock Holmes",
+    "descriere": "A doua colecție de povestiri polițiste scrise de Sir Arthur Conan Doyle și reunește unsprezece dintre cele mai faimoase cazuri ale legendarului detectiv.",
+    "autor": "Sir Arthur Conan Doyle",
+    "pret": 17.43
+  }
+]

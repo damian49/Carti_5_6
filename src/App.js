@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
+import ListaCarti from "./listacarti";
+import Adaug from "./adaug";
 
-function App() {
+const App = () => {
+  const [lista, setLista] = useState([]);
+
+  useEffect(() => {
+    const citesc = async () => {
+      const obPromise = await fetch("carti.json");
+      const sirCarti = await obPromise.json();
+      setLista(sirCarti); //  Utilizez datele primite
+    };
+    citesc();
+  }, []);
+
+  const adaug = (carte) => {
+    const d = new Date();
+    carte.id = d.getTime(); //  O solutie pentru generarea id-urilor distincte
+    setLista([...lista, carte]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Container>
+        <h1>Carti pentru copii</h1>
+      </Container>
+      <ListaCarti listaCarti={lista} />
+      <Container>
+        <Adaug transmit={adaug} />
+      </Container>
+    </>
   );
-}
+};
 
 export default App;
