@@ -6,15 +6,6 @@ import Adaug from "./adaug";
 const App = () => {
   const [lista, setLista] = useState([]);
 
-  useEffect(() => {
-    const citesc = async () => {
-      const obPromise = await fetch("carti.json");
-      const sirCarti = await obPromise.json();
-      setLista(sirCarti); //  Utilizez datele primite
-    };
-    citesc();
-  }, []);
-
   const adaug = (carte) => {
     const d = new Date();
     carte.id = d.getTime(); //  O solutie pentru generarea id-urilor distincte
